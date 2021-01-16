@@ -40,6 +40,22 @@ if update == True:
     # move the temp dir to the destination dir
     shutil.copytree(f'{src}', f'{dst}')
 
+    #the same thing again but with lots of different things because the host also needs the updated Client
+    # Pathsetting magic
+    path = os.path.realpath(__file__)
+    path = path[:-33]
+    dst = path + 'InnocentBotClient/Client'
+    print(dst)
+    src = f'{t}/InnocentBot/InnocentBotClient/Client'
+    print(src)
+
+    # take out the destination dir if it exists
+    if os.path.exists(dst):
+        shutil.rmtree(dst)
+    
+    # move the temp dir to the destination dir
+    shutil.copytree(f'{src}', f'{dst}')
+
     # Remove temporary dir
     shutil.rmtree(t)
 
