@@ -1,14 +1,20 @@
-import os
-os.system('python3.8 -m pip install discord')
-import discord
-os.system('python3.8 -m pip install discord.py')
-from discord.ext import commands
-os.system('python3.8 -m pip install configparser')
-import configparser
-import time
-os.system('python3.8 -m pip install socket.py')
-import socket
-import threading
+while(True):
+    try:
+        import os
+        import time
+        import threading
+
+        import discord
+        from discord.ext import commands
+        import configparser
+        import socket
+
+        break
+    except:
+        os.system('python3.8 -m pip install discord')
+        os.system('python3.8 -m pip install discord.py')
+        os.system('python3.8 -m pip install socket.py')
+        os.system('python3.8 -m pip install configparser')
 
 
 print('Running...')
