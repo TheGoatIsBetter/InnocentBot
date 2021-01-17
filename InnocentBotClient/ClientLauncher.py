@@ -1,7 +1,13 @@
-import wget
-import sys
-import os
-import configparser
+while(True):
+    try:
+        import sys
+        import os
+        import configparser
+        import wget
+        break
+    except:
+        os.system('python3.8 -m pip install configparser')
+        os.system('python3.8 -m pip install wget')
 
 
 config = configparser.ConfigParser()
@@ -10,7 +16,7 @@ config.sections()
 
 
 debug = config.get('Settings', 'Debug')
-URL = config.get('FileServer', 'URL')
+URL = config.get('File Server', 'URL')
 
 if(debug == 'True'):
     update = False
@@ -20,12 +26,15 @@ else:
 #update Host
 if update == True:
 
+    # take out the destination dir if it exists
     if os.path.exists('Client'):
-        os.remove('Client') # if exist, remove it directly
+        os.remove('Client')
+    
+    # download new client
     wget.download(URL)
    
     
-    #some old code for cloning frome git 
+    #some old code for cloning from git 
 
     ## Create temporary dir
     #t = tempfile.mkdtemp()

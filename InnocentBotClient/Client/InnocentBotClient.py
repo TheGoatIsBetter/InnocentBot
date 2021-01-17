@@ -1,14 +1,19 @@
-import sys
-import os
-os.system('python3.8 -m pip install socket.py')
-import socket  
-import time       
-os.system('python3.8 -m pip install configparser')
-import configparser
-os.system('python3.8 -m pip install gpiozero')
-from gpiozero import LED, Button
-os.system('python3.8 -m pip install RPi.GPIO')
-import RPi.GPIO as GPIO    
+while(True):
+    try:
+        import sys
+        import os
+        import time    
+        
+        from gpiozero import LED, Button
+        import RPi.GPIO as GPIO    
+        import configparser
+        import socket  
+        break
+    except:
+        os.system('python3.8 -m pip install gpiozero')
+        os.system('python3.8 -m pip install RPi.GPIO')
+        os.system('python3.8 -m pip install configparser')
+        os.system('python3.8 -m pip install socket.py')
 
   
 # Create a socket object  
