@@ -10,10 +10,10 @@ while(True):
         import socket  
         break
     except:
-        os.system('python3.8 -m pip install gpiozero')
-        os.system('python3.8 -m pip install RPi.GPIO')
-        os.system('python3.8 -m pip install configparser')
-        os.system('python3.8 -m pip install socket.py')
+        os.system('pip3 install gpiozero')
+        os.system('pip3 install RPi.GPIO')
+        os.system('pip3 install configparser')
+        os.system('pip3 install socket.py')
 
   
 # Create a socket object  
@@ -59,12 +59,12 @@ def update():
 
 
     if updateFlagged:
-        print("Updating to most recent version (Note: it will only update once with the host as it checks the version number the host has,\n which may not be the one actually pulled from github,\n this may be fixed in the future)")
+        print("Updating to hosts version...")
         path = os.path.realpath(__file__)
         path = path[:-21]
         os.chdir(path)
 
-        #lines below sets version potentially wrong depending on what was actually pulled from github to prevent activation loop with host (should eventually be fixed)
+        #lines below sets version in ini
         f = open("config.ini", 'r')
         config = f.read()
         config = config.replace(f"ClientVersion = {client_version}", f"ClientVersion = {hosted_client_version}")

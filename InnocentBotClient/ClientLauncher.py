@@ -6,9 +6,8 @@ while(True):
         import wget
         break
     except:
-        os.system('python3.8 -m pip install configparser')
-        os.system('python3.8 -m pip install wget')
-
+        os.system('pip3 install configparser')
+        os.system('pip3 install wget')
 
 config = configparser.ConfigParser()
 config.read('config.ini')
@@ -57,5 +56,5 @@ if update == True:
     #shutil.rmtree(t)
 #
 os.chdir('Client')
-os.system('python3.8 InnocentBotClient.py')
+os.system('python3 InnocentBotClient.py')
 sys.exit()

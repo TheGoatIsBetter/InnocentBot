@@ -11,10 +11,10 @@ while(True):
 
         break
     except:
-        os.system('python3.8 -m pip install discord')
-        os.system('python3.8 -m pip install discord.py')
-        os.system('python3.8 -m pip install socket.py')
-        os.system('python3.8 -m pip install configparser')
+        os.system('pip3 install discord')
+        os.system('pip3 install discord.py')
+        os.system('pip3 install socket.py')
+        os.system('pip3 install configparser')
 
 
 print('Running...')

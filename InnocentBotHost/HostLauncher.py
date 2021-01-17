@@ -8,9 +8,9 @@ while(True):
         import configparser
         break
     except:
-        os.system('python3.8 -m pip install tempfile')
-        os.system('python3.8 -m pip install shutil')
-        os.system('python3.8 -m pip install configparser')
+        os.system('pip3 install tempfile')
+        os.system('pip3 install shutil')
+        os.system('pip3 install configparser')
 
 
 config = configparser.ConfigParser()
@@ -68,5 +68,5 @@ if update == True:
     shutil.rmtree(t)
 
 os.chdir('Host')
-os.system('python3.8 InnocentBotHost.py')
+os.system('python3 InnocentBotHost.py')
 sys.exit(0)
