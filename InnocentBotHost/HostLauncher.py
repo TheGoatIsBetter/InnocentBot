@@ -1,8 +1,16 @@
-import sys
-import os
-import shutil
-import tempfile
-import configparser
+while(True):
+    try:
+        import sys
+        import os
+
+        import tempfile
+        import shutil
+        import configparser
+        break
+    except:
+        os.system('python3.8 -m pip install tempfile')
+        os.system('python3.8 -m pip install shutil')
+        os.system('python3.8 -m pip install configparser')
 
 
 config = configparser.ConfigParser()
