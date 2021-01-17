@@ -6,8 +6,8 @@ while(True):
         import wget
         break
     except:
-        os.system('pip3 install configparser')
-        os.system('pip3 install wget')
+        os.system('pip install configparser')
+        os.system('pip install wget')
 
 config = configparser.ConfigParser()
 config.read('config.ini')

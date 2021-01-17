@@ -151,9 +151,8 @@ while(True):
         recieve = ['failed', 'to', 'pull', 'info']
     
     #################################### MAIN LOOP CONT. - USE COMMANDS ##########################
-
+    
     do_thing = recieve[0]
-
     if do_thing == "recieve_shock_perms":
         print("Sending shock perms...")
         perms = GPIO.input(2)
@@ -162,6 +161,8 @@ while(True):
         shock_length = recieve[1]
         Taser(shock_length)
 
+    #prevents from doing thing on reconnect
+    do_thing = 'nothing'
 
 #close the connection  
 s.close()
